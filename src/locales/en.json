@@ -1,0 +1,107 @@
+{
+  "dialogue": {
+    "continue": "Click to Continue",
+    "close": "Click to Close"
+  },
+  "passwordInput": {
+    "title": "Enter Password",
+    "placeholder": "Password",
+    "submitButton": "OK",
+    "closeButton": "Close",
+    "errorMessage": "Incorrect password. Look for more clues."
+  },
+  "buttons": {
+    "scene1": "Hoshiko's Office",
+    "scene2": "Sara's Cafe",
+    "scene3": "Baburu's Room"
+  },
+  "scene1": {
+    "character": {
+      "dialogue1": "Hello! Welcome to my office.",
+      "dialogue2": "This is where the 'Women in Action' series was born.",
+      "dialogue3": "As the editor-in-chief, my job is to finalize every important deadline.",
+      "dialogue4": "This is a puzzle game demo. Observe the room and find clues.",
+      "dialogue5": "Once you find the password, I’ll treat you to a coffee as thanks.",
+      "dialogue6": "Hint: The light on the window seems different from usual."
+    },
+    "interactions": {
+      "window": [
+        "The window glimmers faintly.",
+        "It seems like there’s a clue hidden in the frame.",
+        "Look for some reference materials.",
+        "Could there be related drafts in the bookshelf?"
+      ],
+      "bookshelf": [
+        "The top shelf has a heavy book.",
+        "Inside Beauvoir's 'The Second Sex,' there's a bookmark sticking out.",
+        "It reads: 'Before the deadline, try typing a draft on the typewriter.'"
+      ],
+      "typewriter": [
+        "You touched the typewriter.",
+        "It prints out: 'Virginia Woolf's birthday: January 25, 1882.'"
+      ]
+    },
+    "success": {
+      "message": "Puzzle solved! Head to Sara's Cafe for the next challenge."
+    }
+  },
+  "scene2": {
+    "character": {
+      "dialogue1": "Hello, I’m Sara, Hoshiko's friend. Welcome to my cafe.",
+      "dialogue2": "Hoshiko mentioned you’re good at puzzles. Can you help me with something?",
+      "dialogue3": "My regular customer Baburu just called to place an order.",
+      "dialogue4": "Can you figure out what coffee Baburu ordered?",
+      "dialogue5": "Once you know, please tell me the coffee's name in lowercase to proceed."
+    },
+    "interactions": {
+      "coffeeMachine": [
+        "This coffee machine is used for most of the drinks. Baburu's order starts here.",
+        "There’s a note on the coffee machine: 'Espresso is the base.'",
+        "It seems you should use the coffee beans from the top right shelf."
+      ],
+      "coffeebeans": [
+        "These coffee beans are carefully selected and taste excellent.",
+        "The package says: 'Medium roast, suitable for light coffee without milk.'"
+      ],
+      "chair": [
+        "This is Baburu's favorite seat. She says the sunlight here makes her feel calm.",
+        "The menu on the table lists several coffee recipes.",
+        "Americano: One shot of Espresso, add two parts hot water.",
+        "Cappuccino: One shot of Espresso, add one part hot milk and one part milk foam.",
+        "Latte: One shot of Espresso, add two parts hot milk and half a part milk foam.",
+        "Which coffee did the customer order?"
+      ]
+    },
+    "success": {
+      "message": "Puzzle solved! Head to Baburu's Room for the final challenge."
+    }
+  },
+  "scene3": {
+    "character": {
+      "dialogue1": "Welcome to my space! I’m Baburu, a professional gamer.",
+      "dialogue2": "Hoshiko and Sara mentioned you’re great at solving puzzles.",
+      "dialogue3": "This room has clues about my esports team’s name. Can you figure it out?",
+      "dialogue5": "As a fellow player, I hope you don't miss any clues. Good luck clearing the level.",
+      "dialogue4": "Look around and combine the clues. Once you know, let me know the team name!",
+
+      "dialogue6": "Please enter the team name in all uppercase English letters."
+    },
+    "interactions": {
+      "chair": [
+        "This is my gaming chair. It’s custom-made for long gaming sessions.",
+        "There’s a patch on the side: 'The C stands for...' Hmm, interesting."
+      ],
+      "tv": [
+        "This is my big TV. I use it to unwind by watching streams or playing console games.",
+        "The wallpaper on the TV shows my team logo: '...osmos.'"
+      ],
+      "hoodie": [
+        "This is our team hoodie! Every player gets one after they join.",
+        "The hoodie has the letters 'C,' 'O,' and 'S' stitched on it. What could it mean?"
+      ]
+    },
+    "success": {
+      "message": "Congratulations! You’ve solved all the puzzles and discovered the team name: Cosmos."
+    }
+  }
+}
