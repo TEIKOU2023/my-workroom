@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { useLoader } from "@react-three/fiber";
 import Character1 from "./Character1";
 import InteractionsCube from "../InteractionsCube";
@@ -20,8 +20,8 @@ function BackgroundModel(
 ) {
   const gltf = useLoader(
     GLTFLoader,
-    "https://pub-ca711ba9a0a347fe8348bb0a96749e9b.r2.dev/room1.glb"
-  );
+    import.meta.env.VITE_ROOM_1_MODEL_URL
+  ) as GLTF;
 
   useEffect(() => {
     if (gltf) {
@@ -104,7 +104,9 @@ const BasicScene1: React.FC<BasicScene1Props> = ({
         <InteractionsCube
           position={[-8, 8, -10]}
           scale={[2.1, 5, 1]}
-          messages={t("scene1.interactions.window", { returnObjects: true }) as string[]}
+          messages={
+            t("scene1.interactions.window", { returnObjects: true }) as string[]
+          }
           onInteract={() => handleCubeInteract("window")}
         />
 
@@ -112,7 +114,11 @@ const BasicScene1: React.FC<BasicScene1Props> = ({
         <InteractionsCube
           position={[3.6, 7.6, -10]}
           scale={[1, 1, 1]}
-          messages={t("scene1.interactions.bookshelf", { returnObjects: true }) as string[]}
+          messages={
+            t("scene1.interactions.bookshelf", {
+              returnObjects: true,
+            }) as string[]
+          }
           onInteract={() => handleCubeInteract("bookshelf")}
         />
 
@@ -120,7 +126,11 @@ const BasicScene1: React.FC<BasicScene1Props> = ({
         <InteractionsCube
           position={[-1, 1, -10]}
           scale={[2.7, 1, 2]}
-          messages={t("scene1.interactions.typewriter", { returnObjects: true }) as string[]}
+          messages={
+            t("scene1.interactions.typewriter", {
+              returnObjects: true,
+            }) as string[]
+          }
           onInteract={() => handleCubeInteract("typewriter")}
         />
       </group>

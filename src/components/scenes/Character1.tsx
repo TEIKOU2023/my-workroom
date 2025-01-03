@@ -1,4 +1,4 @@
-import  { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { useLoader, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import DialogueBox from "../DialogueBox";
@@ -7,8 +7,8 @@ interface CharacterProps {
   position?: [number, number, number];
   scale?: [number, number, number];
   visible: boolean;
-  dynamicDialogue: string[]; // 动态台词
-  onDialogueEnd: () => void; // 对话结束时回调
+  dynamicDialogue: string[];
+  onDialogueEnd: () => void;
 }
 
 function Character1({
@@ -20,8 +20,8 @@ function Character1({
 }: CharacterProps) {
   const texture = useLoader(
     THREE.TextureLoader,
-    "https://pub-ca711ba9a0a347fe8348bb0a96749e9b.r2.dev/character1.png"
-  );
+    import.meta.env.VITE_CHARATER_1_IMG_URL
+  ) as THREE.Texture | null | undefined;
   const [showDialogue, setShowDialogue] = useState(false);
   const [hovered, setHovered] = useState(false);
   const meshRef = useRef<THREE.Mesh>(null);
@@ -70,7 +70,9 @@ function Character1({
           onClose={() => {
             setShowDialogue(false);
             onDialogueEnd();
-          } } id={null}        />
+          }}
+          id={null}
+        />
       )}
     </>
   );

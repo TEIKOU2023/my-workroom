@@ -20,8 +20,8 @@ function Character2({
 }: Character2Props) {
   const texture = useLoader(
     THREE.TextureLoader,
-    "https://pub-ca711ba9a0a347fe8348bb0a96749e9b.r2.dev/character2.png"
-  );
+    import.meta.env.VITE_CHARATER_2_IMG_URL
+  ) as THREE.Texture | null | undefined;
   const [showDialogue, setShowDialogue] = useState(false);
   const [hovered, setHovered] = useState(false);
   const meshRef = useRef<THREE.Mesh>(null);
@@ -70,7 +70,9 @@ function Character2({
           onClose={() => {
             setShowDialogue(false);
             onDialogueEnd();
-          } } id={null}        />
+          }}
+          id={null}
+        />
       )}
     </>
   );

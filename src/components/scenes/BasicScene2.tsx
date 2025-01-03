@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { useLoader } from "@react-three/fiber";
 import Character2 from "./Character2";
 import InteractionsCube from "../InteractionsCube";
@@ -20,8 +20,8 @@ function BackgroundModel(
 ) {
   const gltf = useLoader(
     GLTFLoader,
-    "https://pub-ca711ba9a0a347fe8348bb0a96749e9b.r2.dev/room2.glb"
-  );
+    import.meta.env.VITE_ROOM_2_MODEL_URL
+  ) as GLTF;
 
   useEffect(() => {
     if (gltf) {
